@@ -1,0 +1,254 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F7390BF16D627B7002604D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F7390BE16D627B7002604D9 /* Foundation.framework */; };
+		0FC92AB816D5B78200F1455C /* MindWaveBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FC92AB616D5B78200F1455C /* MindWaveBridge.m */; };
+		0FC92AB916D5B78200F1455C /* MindWaveBridge.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FC92AB716D5B78200F1455C /* MindWaveBridge.h */; };
+		0FC92ABC16D5E06A00F1455C /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FC92ABB16D5E06A00F1455C /* CoreFoundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0F7390BE16D627B7002604D9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		0FC92AA916D5AF1A00F1455C /* libMindWaveBridge.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libMindWaveBridge.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		0FC92AB616D5B78200F1455C /* MindWaveBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MindWaveBridge.m; sourceTree = "<group>"; };
+		0FC92AB716D5B78200F1455C /* MindWaveBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MindWaveBridge.h; sourceTree = "<group>"; };
+		0FC92ABB16D5E06A00F1455C /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0FC92AA616D5AF1A00F1455C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F7390BF16D627B7002604D9 /* Foundation.framework in Frameworks */,
+				0FC92ABC16D5E06A00F1455C /* CoreFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0FC92AA016D5AF1A00F1455C = {
+			isa = PBXGroup;
+			children = (
+				0FC92ABA16D5E03E00F1455C /* libs */,
+				0FC92AB016D5B72900F1455C /* src */,
+				0FC92AAA16D5AF1A00F1455C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		0FC92AAA16D5AF1A00F1455C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0FC92AA916D5AF1A00F1455C /* libMindWaveBridge.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		0FC92AB016D5B72900F1455C /* src */ = {
+			isa = PBXGroup;
+			children = (
+				0FC92AB616D5B78200F1455C /* MindWaveBridge.m */,
+				0FC92AB716D5B78200F1455C /* MindWaveBridge.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		0FC92ABA16D5E03E00F1455C /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				0F7390BE16D627B7002604D9 /* Foundation.framework */,
+				0FC92ABB16D5E06A00F1455C /* CoreFoundation.framework */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		0FC92AA716D5AF1A00F1455C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC92AB916D5B78200F1455C /* MindWaveBridge.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0FC92AA816D5AF1A00F1455C /* MindWaveBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0FC92AAD16D5AF1A00F1455C /* Build configuration list for PBXNativeTarget "MindWaveBridge" */;
+			buildPhases = (
+				0FC92AA516D5AF1A00F1455C /* Sources */,
+				0FC92AA616D5AF1A00F1455C /* Frameworks */,
+				0FC92AA716D5AF1A00F1455C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MindWaveBridge;
+			productName = MindWaveBridge;
+			productReference = 0FC92AA916D5AF1A00F1455C /* libMindWaveBridge.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0FC92AA116D5AF1A00F1455C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Daisuke Akatsuka";
+			};
+			buildConfigurationList = 0FC92AA416D5AF1A00F1455C /* Build configuration list for PBXProject "MindWaveBridge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 0FC92AA016D5AF1A00F1455C;
+			productRefGroup = 0FC92AAA16D5AF1A00F1455C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				0FC92AA816D5AF1A00F1455C /* MindWaveBridge */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FC92AA516D5AF1A00F1455C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0FC92AB816D5B78200F1455C /* MindWaveBridge.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		0FC92AAB16D5AF1A00F1455C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0FC92AAC16D5AF1A00F1455C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = "";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0FC92AAE16D5AF1A00F1455C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_EMPTY_BODY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRIP_STYLE = all;
+			};
+			name = Debug;
+		};
+		0FC92AAF16D5AF1A00F1455C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
+				CLANG_WARN_EMPTY_BODY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_C_LANGUAGE_STANDARD = "compiler-default";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				STRIP_STYLE = all;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0FC92AA416D5AF1A00F1455C /* Build configuration list for PBXProject "MindWaveBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FC92AAB16D5AF1A00F1455C /* Debug */,
+				0FC92AAC16D5AF1A00F1455C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0FC92AAD16D5AF1A00F1455C /* Build configuration list for PBXNativeTarget "MindWaveBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FC92AAE16D5AF1A00F1455C /* Debug */,
+				0FC92AAF16D5AF1A00F1455C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0FC92AA116D5AF1A00F1455C /* Project object */;
+}

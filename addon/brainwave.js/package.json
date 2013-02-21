@@ -1,9 +1,10 @@
 {
-    "name": "brainwave", 
+    "name": "brainwavejs", 
     "license": "MPL 1.1/GPL 2.0/LGPL 2.1", 
-    "author": "", 
+    "author": "Daisuke Akatsuka", 
     "version": "0.1", 
-    "fullName": "addon", 
+    "fullName": "brainwave.js", 
     "id": "jid1-hOW1Tgd0KXxWFQ", 
-    "description": "a basic add-on"
+    "description": "The addon connects between Firefox and brainwave device",
+    "unpack":"true"
 }

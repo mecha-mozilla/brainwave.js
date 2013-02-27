@@ -3,31 +3,19 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 const {Cc,Ci,Cr} = require("chrome");
+const jsonParser = Cc["@mozilla.org/dom/json;1"].createInstance(Ci.nsIJSON);
 
 var transport;
 var istream;
-var rdata;
-
-exports.TYPE_BATTERY = 0;
-exports.TYPE_POOR_SIGNAL = 1;
-exports.TYPE_ATTENTION = 2;
-exports.TYPE_MEDITATION = 3;
-exports.TYPE_RAW = 4;
-exports.TYPE_DELTA = 5;
-exports.TYPE_THETA = 6;
-exports.TYPE_ALPHA1 = 7;
-exports.TYPE_ALPHA2 = 8;
-exports.TYPE_BETA1 = 9;
-exports.TYPE_BETA2 = 10;
-exports.TYPE_GAMMA1 = 11;
-exports.TYPE_GAMMA2 = 12;
+var brainwave;
 
 exports.open = function() {
     var socketService = Cc["@mozilla.org/network/socket-transport-service;1"]
     .getService(Ci.nsISocketTransportService);
     transport = socketService.createTransport(null, 0, "127.0.0.1", 13854, null);
 
-    var parameter = "{'enableRawOutput': true, 'format': 'Json'}";
+    //if enableRawOutput is true, JSON format is wrong...
+    var parameter = "{'enableRawOutput': false, 'format': 'Json'}";
     var ostream = transport.openOutputStream(0,0,0);
     ostream.write(parameter, parameter.length);
     ostream.close();
@@ -41,12 +29,63 @@ exports.open = function() {
 
 exports.readPackets = function() {
     var availableBytes = istream.available();
-    rdata = istream.read(availableBytes); 
-    console.log(rdata);
+    if (availableBytes > 0) {
+        var rdata = istream.read(availableBytes); 
+        try {
+            brainwave = jsonParser.decode(rdata);
+            if (brainwave.eSense && brainwave.eegPower) {
+            } else {
+                availableBytes = 0;
+            }
+        } catch (e) {
+            console.log(e);
+            availableBytes = 0;
+        }
+    }
+ 
     return availableBytes;
 }
 
-exports.getValue = function(type) {
+//Sense -----------------------------------------------
+exports.getAttention = function() {
+    return brainwave.eSense.attention;
+}
+
+exports.getMeditation = function() {
+    return brainwave.eSense.meditation;
+}
+
+//EEG -------------------------------------------------
+exports.getDelta = function() {
+    return brainwave.eegPower.delta;
+}
+
+exports.getTheta = function() {
+    return brainwave.eegPower.theta;
+}
+
+exports.getLowAlpha = function() {
+    return brainwave.eegPower.lowAlpha;
+}
+
+exports.getHighAlpha = function() {
+    return brainwave.eegPower.highAlpha;
+}
+
+exports.getLowBeta = function() {
+    return brainwave.eegPower.lowBeta;
+}
+
+exports.getHighBeta = function() {
+    return brainwave.eegPower.highBeta;
+}
+
+exports.getLowGamma = function() {
+    return brainwave.eegPower.lowGamma;
+}
+
+exports.getHighGamma = function() {
+    return brainwave.eegPower.highGamma;
 }
 
 exports.close = function() {

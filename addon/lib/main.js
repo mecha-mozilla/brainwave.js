@@ -10,13 +10,12 @@ brainwave.open();
 function observe() {
     var packetCount = brainwave.readPackets();
     if (packetCount > 0) {
-        var raw = brainwave.getValue(brainwave.TYPE_RAW);
-        var attention = brainwave.getValue(brainwave.TYPE_ATTENTION);
-        var meditation = brainwave.getValue(brainwave.TYPE_MEDITATION);
-        console.log(raw+" "+attention+" "+meditation);
+        var attention = brainwave.getAttention();
+        var meditation = brainwave.getMeditation();
+        console.log(attention+" "+meditation);
     } else {
-        console.log("0 packet.");
+        //console.log("0 packet.");
     }
-    timers.setTimeout(observe, 1000);
+    timers.setTimeout(observe, 100);
 }
 observe();

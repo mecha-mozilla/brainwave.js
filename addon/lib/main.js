@@ -12,7 +12,25 @@ function observe() {
     if (packetCount > 0) {
         var attention = brainwave.getAttention();
         var meditation = brainwave.getMeditation();
-        console.log(attention+" "+meditation);
+        var delta = brainwave.getDelta();
+        var theta = brainwave.getTheta();
+        var lowAlpha = brainwave.getLowAlpha();
+        var highAlpha = brainwave.getHighAlpha();
+        var lowBeta = brainwave.getLowBeta();
+        var highBeta = brainwave.getHighBeta();
+        var lowGamma = brainwave.getLowGamma();
+        var highGamma = brainwave.getHighGamma();
+        console.log("---------------------------------------");
+        console.log("attention:"+attention);
+        console.log("meditation:"+meditation);
+        console.log("delta:"+delta);
+        console.log("theta:"+theta);
+        console.log("lowAlpha:"+lowAlpha);
+        console.log("highAlpha:"+highAlpha);
+        console.log("lowBeta:"+lowBeta);
+        console.log("highBeta:"+highBeta);
+        console.log("lowGamma:"+lowGamma);
+        console.log("highGamma:"+highGamma);
     } else {
         //console.log("0 packet.");
     }

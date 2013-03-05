@@ -3,8 +3,8 @@
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
 const {Cc,Ci,Cr} = require("chrome");
-var brainwave = require("brainwave.js");
-var timers = require("timers");
+const brainwave = require("brainwave.js");
+const timers = require("timers");
 
 brainwave.open();
 function observe() {
